@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dill-green-primary: #3B7A57;
+  --dill-green-light: #E8F3EC;
+  --dill-green-dark: #1F2D27;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dill-green-light);
+  color: var(--dill-green-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #0a0f0c;
+  color: var(--dill-green-light);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px rgba(59, 122, 87, 0.3);
+  }
+  
+  .glow-green-hover:hover {
+    box-shadow: 0 0 30px rgba(59, 122, 87, 0.5);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}
+
