@@ -110,14 +110,14 @@ export default function About() {
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              I'm a Senior Web3 Backend Developer with 8+ years of experience specializing in Go, TypeScript, and Rust,
+              I&apos;m a Senior Web3 Backend Developer with 8+ years of experience specializing in Go, TypeScript, and Rust,
               architecting and building production-grade blockchain infrastructure and decentralized backend systems.
-              I've delivered 13+ production Web3 projects spanning DeFi platforms, NFT marketplaces, trading terminals,
+              I&apos;ve delivered 13+ production Web3 projects spanning DeFi platforms, NFT marketplaces, trading terminals,
               gaming infrastructure, and blockchain data platforms across Ethereum, Solana, Bitcoin, and multiple EVM chains.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               My expertise spans building scalable blockchain APIs, smart contract backends, multi-chain integration
-              systems, MEV bundlers, trading bots, and decentralized infrastructure. I've built DeFi platforms like
+              systems, MEV bundlers, trading bots, and decentralized infrastructure. I&apos;ve built DeFi platforms like
               FeeFree (zero-fee DEX) and Ribbon Finance (structured products), NFT platforms including Monkai and Pine
               (NFT financing), trading terminals like ChainPro (hedge fund-grade onchain trading), and Bitcoin infrastructure
               including Signal21 (Bitcoin data platform) and MemeDealer (Rune DEX). I specialize in connecting traditional
@@ -128,8 +128,8 @@ export default function About() {
               My work includes architecting RESTful and GraphQL APIs for blockchain data, implementing smart contracts
               for DeFi and NFT protocols, building trading bots and MEV bundlers using Flashbots and Jito, designing
               optimized database schemas for indexing blockchain transactions, and creating full-stack applications with
-              React and Next.js. I've worked with technologies including Go, TypeScript, Rust, Solidity, Solana Web3,
-              Ethers.js, PostgreSQL, MongoDB, AWS, and various blockchain tooling. I'm passionate about building
+              React and Next.js. I&apos;ve worked with technologies including Go, TypeScript, Rust, Solidity, Solana Web3,
+              Ethers.js, PostgreSQL, MongoDB, AWS, and various blockchain tooling. I&apos;m passionate about building
               production-grade infrastructure that powers the decentralized web across multiple blockchain ecosystems.
             </p>
           </div>

@@ -155,7 +155,7 @@ export default function Services() {
             Ready to Build Something Amazing?
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your Web3 backend requirements and how I can help build scalable blockchain APIs,
+            Let&apos;s discuss your Web3 backend requirements and how I can help build scalable blockchain APIs,
             smart contract backends, and decentralized infrastructure for your dApp or DeFi protocol.
           </p>
           <a

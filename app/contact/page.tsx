@@ -63,7 +63,7 @@ export default function Contact() {
             Get In Touch
           </h1>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            Have a Web3 project in mind? Let's discuss how we can build scalable blockchain backends,
+            Have a Web3 project in mind? Let&apos;s discuss how we can build scalable blockchain backends,
             smart contract infrastructure, or decentralized applications together.
           </p>
         </motion.div>
@@ -150,7 +150,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-600 rounded-lg text-green-800 dark:text-green-300"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
 

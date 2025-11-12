@@ -279,12 +279,14 @@ export default function ProjectBubbleMap({ projects }: ProjectBubbleMapProps) {
         width={dimensions.width}
         height={dimensions.height}
         nodeLabel={(node: any) => node.name}
-        nodeColor={(node: any) => categoryColors[node.category] || '#3B7A57'}
+        nodeColor={(node: any) => {
+          const category = Array.isArray(node.category) ? node.category[0] : node.category
+          return categoryColors[category] || '#3B7A57'
+        }}
         nodeVal={(node: any) => node.val}
         linkColor={() => 'rgba(59, 122, 87, 0)'}
         linkWidth={0}
         linkDirectionalArrowLength={0}
-        linkOpacity={0}
         onNodeClick={(node: any) => {
           setSelectedProject(node.project)
         }}
@@ -324,7 +326,8 @@ export default function ProjectBubbleMap({ projects }: ProjectBubbleMapProps) {
           const project = node.project as Project
           const index = node.index || 0
           // Generate unique gradient colors for THIS specific bubble
-          const gradientColors = getUniqueGradientColors(node.category, node.id, index)
+          const category = Array.isArray(node.category) ? node.category[0] : node.category
+          const gradientColors = getUniqueGradientColors(category, node.id, index)
           
           // Create gradient for bubble
           const gradient = ctx.createRadialGradient(
@@ -480,57 +483,59 @@ export default function ProjectBubbleMap({ projects }: ProjectBubbleMapProps) {
             ctx.fillText(line, x, currentY + i * techFontSize * 1.2)
           })
         }}
-        d3Force="charge"
-        d3ForceStrength={(node: any) => {
-          // Very strong repulsion to prevent overlapping
-          const radius = node.val || 85
-          return -radius * 800 // Even stronger repulsion
-        }}
-        d3ForceCollide={(node: any) => {
-          // Collision detection radius with much more padding
-          const radius = node.val || 85
-          return radius + 60 // Much larger padding - ensures no overlap
-        }}
-        d3ForceX={(node: any) => {
-          // Keep nodes within bounds - prevent going outside container
-          const width = dimensions.width
-          const padding = 150
-          const radius = node.val || 85
-          const minX = padding + radius
-          const maxX = width - padding - radius
-          const x = node.x || width / 2
-          
-          if (x < minX) {
-            return (minX - x) * 0.5
-          } else if (x > maxX) {
-            return (maxX - x) * 0.5
+        {...({
+          d3Force: "charge",
+          d3ForceStrength: (node: any) => {
+            // Very strong repulsion to prevent overlapping
+            const radius = node.val || 85
+            return -radius * 800 // Even stronger repulsion
+          },
+          d3ForceCollide: (node: any) => {
+            // Collision detection radius with much more padding
+            const radius = node.val || 85
+            return radius + 60 // Much larger padding - ensures no overlap
+          },
+          d3ForceX: (node: any) => {
+            // Keep nodes within bounds - prevent going outside container
+            const width = dimensions.width
+            const padding = 150
+            const radius = node.val || 85
+            const minX = padding + radius
+            const maxX = width - padding - radius
+            const x = node.x || width / 2
+            
+            if (x < minX) {
+              return (minX - x) * 0.5
+            } else if (x > maxX) {
+              return (maxX - x) * 0.5
+            }
+            return 0
+          },
+          d3ForceY: (node: any) => {
+            // Keep nodes within bounds - prevent going outside container
+            const height = dimensions.height
+            const padding = 150
+            const radius = node.val || 85
+            const minY = padding + radius
+            const maxY = height - padding - radius
+            const y = node.y || height / 2
+            
+            if (y < minY) {
+              return (minY - y) * 0.5
+            } else if (y > maxY) {
+              return (maxY - y) * 0.5
+            }
+            return 0
+          },
+          d3ForceCenter: (node: any) => {
+            // Very weak center force to allow maximum spread
+            return 0.01
+          },
+          cooldownTicks: 1000,
+          onEngineStop: () => {
+            // Force graph has stabilized
           }
-          return 0
-        }}
-        d3ForceY={(node: any) => {
-          // Keep nodes within bounds - prevent going outside container
-          const height = dimensions.height
-          const padding = 150
-          const radius = node.val || 85
-          const minY = padding + radius
-          const maxY = height - padding - radius
-          const y = node.y || height / 2
-          
-          if (y < minY) {
-            return (minY - y) * 0.5
-          } else if (y > maxY) {
-            return (maxY - y) * 0.5
-          }
-          return 0
-        }}
-        d3ForceCenter={(node: any) => {
-          // Very weak center force to allow maximum spread
-          return 0.01
-        }}
-        cooldownTicks={1000}
-        onEngineStop={() => {
-          // Force graph has stabilized
-        }}
+        } as any)}
       />
 
       {/* Category Legend */}
@@ -580,12 +585,17 @@ export default function ProjectBubbleMap({ projects }: ProjectBubbleMapProps) {
                   <h3 className="text-2xl font-display font-bold text-dill-green-primary dark:text-dill-green-light mb-2">
                     {selectedProject.name}
                   </h3>
-                  <span
-                    className="inline-block px-3 py-1 rounded-full text-sm font-medium text-white"
-                    style={{ backgroundColor: categoryColors[selectedProject.category] }}
-                  >
-                    {selectedProject.category}
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {(Array.isArray(selectedProject.category) ? selectedProject.category : [selectedProject.category]).map((cat) => (
+                      <span
+                        key={cat}
+                        className="inline-block px-3 py-1 rounded-full text-sm font-medium text-white"
+                        style={{ backgroundColor: categoryColors[cat] || '#3B7A57' }}
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <button
                   onClick={() => setSelectedProject(null)}

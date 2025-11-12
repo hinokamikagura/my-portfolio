@@ -151,7 +151,7 @@ export default function CryptoInheritance() {
               <h3 className="text-lg font-semibold text-red-800 dark:text-red-300 mb-2">The Problem</h3>
               <p className="text-gray-700 dark:text-gray-300">
                 Estate planning for digital assets is broken. A significant portion of crypto wealth becomes
-                irretrievable upon the owner's death or incapacitation. Private keys die with owners; exchanges/custodians
+                irretrievable upon the owner&apos;s death or incapacitation. Private keys die with owners; exchanges/custodians
                 add counterparty risk and jurisdictional limits; DIY solutions are error-prone.
               </p>
             </div>
@@ -446,7 +446,7 @@ export default function CryptoInheritance() {
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Currently building the MVP frontend. Looking for investors, advisors, or technical partners
-            to help bring this platform to market. If you're interested in learning more or contributing,
+            to help bring this platform to market. If you&apos;re interested in learning more or contributing,
             feel free to reach out.
           </p>
           <Link href="/contact">

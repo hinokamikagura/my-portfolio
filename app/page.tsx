@@ -77,7 +77,7 @@ export default function Home() {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-display font-bold text-dill-green-dark dark:text-dill-green-light mb-6"
           >
-            Hi, I'm{' '}
+            Hi, I&apos;m{' '}
             <span className="text-dill-green-primary dark:text-dill-green-light">
               Kairos
             </span>
@@ -189,7 +189,7 @@ export default function Home() {
                 A non-custodial, multi-chain inheritance and contingency transfer system that lets asset owners
                 define beneficiaries and conditions (timelocks, liveness checks, legal proofs) while retaining
                 self-custody until the event is triggered. Solving the critical problem of irretrievable crypto
-                wealth upon owner's death or incapacitation.
+                wealth upon owner&apos;s death or incapacitation.
               </p>
               <div className="mb-4 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg inline-block">
                 <p className="text-sm text-blue-800 dark:text-blue-300">
