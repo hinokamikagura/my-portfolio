@@ -22,6 +22,15 @@ export const metadata: Metadata = {
   description: 'Senior Web3 Backend Developer with 8+ years of experience in Go, TypeScript, and Rust. Built 13+ production projects including DeFi platforms, NFT marketplaces, trading terminals, and blockchain infrastructure across Ethereum, Solana, Bitcoin, and multiple EVM chains.',
   keywords: ['Senior Web3 Developer', 'Backend Developer', 'Go', 'TypeScript', 'Rust', 'Solidity', 'Blockchain', 'Smart Contracts', 'DeFi', 'NFT', 'Trading Bots', 'MEV', 'Solana', 'Bitcoin', 'Ethereum', 'Blockchain APIs', 'Web3 Infrastructure'],
   authors: [{ name: 'Kairos Stroud' }],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Kairos Stroud — Senior Web3 Backend Developer',
     description: 'Senior Web3 Backend Developer with 8+ years of experience. Built 13+ production projects across DeFi, NFT, trading, and blockchain infrastructure.',
