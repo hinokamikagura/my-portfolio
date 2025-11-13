@@ -79,7 +79,7 @@ export default function Home() {
           >
             Hi, I&apos;m{' '}
             <span className="text-dill-green-primary dark:text-dill-green-light">
-              Kairos
+              Jonathan Lim
             </span>
           </motion.h1>
           

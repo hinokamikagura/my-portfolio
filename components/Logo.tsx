@@ -54,9 +54,9 @@ export default function Logo({ className = '', size = 32 }: LogoProps) {
         opacity="0.3"
       />
       
-      {/* Inner geometric K shape */}
+      {/* Inner geometric J shape */}
       <path
-        d="M 20 18 L 20 46 M 20 32 L 36 18 M 20 32 L 36 46"
+        d="M 28 18 L 28 40 Q 28 48 36 48 L 40 48"
         stroke={`url(#${gradientId})`}
         strokeWidth="3.5"
         strokeLinecap="round"
@@ -65,11 +65,9 @@ export default function Logo({ className = '', size = 32 }: LogoProps) {
       />
       
       {/* Decorative nodes - representing blockchain blocks */}
-      <circle cx="20" cy="18" r="2.5" fill={`url(#${gradientId})`} />
-      <circle cx="20" cy="32" r="2.5" fill={`url(#${gradientId})`} />
-      <circle cx="20" cy="46" r="2.5" fill={`url(#${gradientId})`} />
-      <circle cx="36" cy="18" r="2.5" fill={`url(#${gradientId})`} />
-      <circle cx="36" cy="46" r="2.5" fill={`url(#${gradientId})`} />
+      <circle cx="28" cy="18" r="2.5" fill={`url(#${gradientId})`} />
+      <circle cx="28" cy="40" r="2.5" fill={`url(#${gradientId})`} />
+      <circle cx="36" cy="48" r="2.5" fill={`url(#${gradientId})`} />
       
       {/* Connecting lines - representing network connections */}
       <path

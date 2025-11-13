@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <Logo size={32} />
               <h3 className="text-lg font-display font-bold text-dill-green-primary dark:text-dill-green-light">
-                Kairos Stroud
+                Jonathan Lim
               </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-dill-green-light dark:border-dill-green-primary/20 text-center text-sm text-gray-600 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} Kairos. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Jonathan Lim. All rights reserved.</p>
         </div>
       </div>
     </footer>

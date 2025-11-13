@@ -1,4 +1,4 @@
-# Kairos Portfolio Website
+# Jonathan Lim Portfolio Website
 
 A modern, multi-page portfolio website for a Senior Web3 Backend Developer built with Next.js, Tailwind CSS, and Framer Motion.
 

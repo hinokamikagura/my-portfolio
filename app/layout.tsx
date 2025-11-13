@@ -18,10 +18,10 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  title: 'Kairos Stroud — Senior Web3 Backend Developer',
+  title: 'Jonathan Lim — Senior Web3 Backend Developer',
   description: 'Senior Web3 Backend Developer with 8+ years of experience in Go, TypeScript, and Rust. Built 13+ production projects including DeFi platforms, NFT marketplaces, trading terminals, and blockchain infrastructure across Ethereum, Solana, Bitcoin, and multiple EVM chains.',
   keywords: ['Senior Web3 Developer', 'Backend Developer', 'Go', 'TypeScript', 'Rust', 'Solidity', 'Blockchain', 'Smart Contracts', 'DeFi', 'NFT', 'Trading Bots', 'MEV', 'Solana', 'Bitcoin', 'Ethereum', 'Blockchain APIs', 'Web3 Infrastructure'],
-  authors: [{ name: 'Kairos Stroud' }],
+  authors: [{ name: 'Jonathan Lim' }],
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'Kairos Stroud — Senior Web3 Backend Developer',
+    title: 'Jonathan Lim — Senior Web3 Backend Developer',
     description: 'Senior Web3 Backend Developer with 8+ years of experience. Built 13+ production projects across DeFi, NFT, trading, and blockchain infrastructure.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kairos Stroud — Senior Web3 Backend Developer',
+    title: 'Jonathan Lim — Senior Web3 Backend Developer',
     description: 'Senior Web3 Backend Developer specializing in Go, TypeScript, and Rust. Built DeFi platforms, NFT marketplaces, and trading infrastructure.',
   },
 }
