@@ -203,10 +203,10 @@ export default function Contact() {
                       Email
                     </h3>
                     <a
-                      href="mailto:jonathan.lim@gmail.com"
+                      href="mailto:kairos.stroud@gmail.com"
                       className="text-gray-600 dark:text-gray-400 hover:text-dill-green-primary dark:hover:text-dill-green-light transition-colors"
                     >
-                      jonathan.lim@gmail.com
+                      kairos.stroud@gmail.com
                     </a>
                   </div>
                 </div>
